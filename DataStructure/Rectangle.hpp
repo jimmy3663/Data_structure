@@ -11,10 +11,10 @@ public:
 	int GetWidth();
 	bool operator==(const Rectangle &s);
 	bool operator<(const Rectangle &s);
-	ostream& operator<<(ostream & os, Rectangle &r);
+	friend std::ostream& operator<<(std::ostream& os, Rectangle &r)
+
 private:
 	int xLow, yLow, height, width;
 
 };
 #endif
-
